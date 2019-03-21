@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% 										%
+% DEFAULT HEADER FOR					%
+% BJØRN-PETTER JOHANNESSENS		%
+% LATEX NOTES							%
+% bp.johannessen@gmail.com				%
+% LAST REVISED 2014-11-17				%
+%%%%%%%%%%%%%%%%%%%%%%%%
+% 11 pt font, A4 paper, report format
+% UTF8
+\documentclass[11pt,norsk,a4paper]{report}
+\usepackage[utf8x]{inputenc}
+
+
+\usepackage{ulem}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% For multiple columns: \begin{multicols}{<no columns>}
+\usepackage{multicol}
+
+% For colors in tables
+\usepackage{xcolor,colortbl}
+
+% For URL refs
+\usepackage{hyperref}
+
+% For wrapping tables
+\usepackage{tabularx,calc} % for wrapping av tabeller
+
+% For \begin{comment}
+\usepackage{comment}
+
+% Can't remember
+\usepackage{color}
+%
+% Uncomment next line for 0.75 inch margins
+\usepackage[margin=0.75in]{geometry}
+\usepackage{textcomp}
+\usepackage{makeidx}
+
+\makeindex
+
+% Fix paragraphs
+\setcounter{secnumdepth}{5}
+
+% Indentation = new line, not tabular indentation
+\usepackage[parfill]{parskip}
+
+%
+% Extra commands, environments, etc. for hacking purposes
+%
+
+% \tab gives 2 em space
+\newcommand{\tab}{\hspace*{2em}}
+
+% \degree = circle superscript, ex. 100 \degree C
+\newcommand{\degree}{\ensuremath{^\circ}}
+
+% Same as \begin{itemize}, but less margins
+\newenvironment{itemz}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+% Same as \begin{enumerate}, but less margins
+\newenvironment{enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+% Begin the document!
+\begin{document}
