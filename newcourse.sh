@@ -6,7 +6,7 @@
 #
 # Bjørn-Petter Johannessen
 # bp.johannessen@gmail.com
-#
+# Last modified: March 21 2019
 
 # Get input from the user
 # $coursename, $courseauthor
@@ -21,14 +21,14 @@ if [ $HOSTNAME = "bp-mac.local" ]; then
 #elif [ $HOSTNAME = "other-computer.lan" ]; then
 #	courseauthor="Owner of Computer"
 else
-	echo "Whos is the author of the notes?"
+	echo "Who is the author of the notes?"
 	read courseauthor
 fi
 
 echo "How many chapters are you planning?"
 read coursechapters
 
-echo "In what time period are they written in? (e.g., yyy-mm-dd - yyyy-mm-dd)"
+echo "In what time period are they written? (e.g., yyy-mm-dd - yyyy-mm-dd)"
 read coursedate
 
 #
@@ -45,14 +45,14 @@ echo "Time range: $coursedate"
 # Get confirmation from user
 #
 
-echo "Are you sure? (Y/N)"
+echo "Are you sure? (y/n)"
 read confirm
 
 #
 # Check Y/N from user; N terminates.
 #
 
-if [ $confirm != "Y" ]
+if [ $confirm != "y" ]
 
 	then
 	# Terminate
@@ -173,6 +173,7 @@ else
 
 	echo "\\end{document}" >> $coursenametex
 
+	echo "Creating folder: $coursename"
 	cd ..
 	open .	
 fi
